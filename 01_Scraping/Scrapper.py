@@ -4,6 +4,7 @@ from selenium.webdriver.chrome.service import Service
 from webdriver_manager.chrome import ChromeDriverManager
 from selenium.webdriver.common.by import By
 from bs4 import BeautifulSoup
+import requests
 import time
 import random
 import pandas as pd
@@ -151,6 +152,63 @@ def extraer_ranking_con_fecha(url, fecha_asignada, driver):
     df = pd.DataFrame(datos_ranking).drop_duplicates(subset=['País']).reset_index(drop=True)
     return df
 
+# ==========================================
+# FUNCIONES DE EXTRACCIÓN VALOR DE MERCADO
+# ==========================================
+def limpiar_valor_mercado(valor_str):
+    v = valor_str.replace('€', '').strip()
+    if not v or v == '-': return 0.0
+    v = v.replace(',', '.')
+    try:
+        if 'mil mill.' in v: return float(v.replace('mil mill.', '').strip()) * 1000
+        elif 'mill.' in v: return float(v.replace('mill.', '').strip())
+        elif 'mil' in v: return float(v.replace('mil', '').strip()) / 1000
+        else: return float(v)
+    except: return 0.0
+
+def extraer_transfermarkt(ruta_salida):
+    """Extrae el valor de mercado de las selecciones desde Transfermarkt."""
+    base_url = "https://www.transfermarkt.es/weltmeisterschaft/teilnehmer/pokalwettbewerb/FIWC/saison_id/2025/page/"
+    headers = {"User-Agent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/114.0.0.0 Safari/537.36"}
+    
+    datos = []
+    pagina = 1
+    equipos_pagina_anterior = []
+    
+    print("Iniciando extracción de valores de mercado en Transfermarkt...")
+    while True:
+        url = f"{base_url}{pagina}"
+        response = requests.get(url, headers=headers)
+        if response.status_code != 200: break 
+        soup = BeautifulSoup(response.content, "html.parser")
+        tablas = soup.find_all("table", class_="items")
+        if not tablas: break 
+            
+        equipos_pagina_actual = []
+        for tabla in tablas:
+            filas = tabla.find("tbody").find_all("tr")
+            for fila in filas:
+                columnas = fila.find_all("td")
+                if len(columnas) < 5: continue
+                celda_nombre = fila.find("td", class_="hauptlink")
+                if not celda_nombre: continue
+                equipo = celda_nombre.text.strip()
+                valor_raw = columnas[-1].text.strip()
+                equipos_pagina_actual.append(equipo)
+                datos.append({
+                    "Equipo": equipo,
+                    "Valor_Mercado_Millones_Eur": limpiar_valor_mercado(valor_raw)
+                })
+        
+        if equipos_pagina_actual == equipos_pagina_anterior: break
+        equipos_pagina_anterior = equipos_pagina_actual
+        pagina += 1
+        time.sleep(1.5)
+        
+    df = pd.DataFrame(datos).drop_duplicates(subset=['Equipo'])
+    df.to_csv(ruta_salida, index=False, encoding="utf-8-sig")
+    print(f"Transfermarkt finalizado. {len(df)} equipos guardados en {ruta_salida}")
+
 
 # ==========================================
 # BLOQUE PRINCIPAL DE EJECUCIÓN
@@ -168,6 +226,7 @@ if __name__ == "__main__":
     RUTA_URLS = os.path.join(carpeta_raiz, "Data", "urls.txt")
     RUTA_CSV_PARTIDOS = os.path.join(carpeta_raiz, "Data", "partidos.csv")
     RUTA_CSV_RANKINGS = os.path.join(carpeta_raiz, "Data", "ranking_fifa.csv")
+    RUTA_CSV_TRANSFER = os.path.join(carpeta_raiz, "Data", "transfermarkt.csv")
     
     # 1. CONEXIÓN AL NAVEGADOR
     print("Iniciando pipeline de extracción de datos...")
@@ -314,6 +373,15 @@ if __name__ == "__main__":
         print(f"Archivo consolidado guardado en: '{RUTA_CSV_RANKINGS}'")
     else:
         print("\nNo se extrajeron datos de los rankings.")
+
+
+    # ---------------------------------------------------------
+    # FASE 3: EXTRACCIÓN DE VALOR DE MERCADO
+    # ---------------------------------------------------------
+    print("\n" + "="*45)
+    print("FASE 3: EXTRACCIÓN DE VALORES DE MERCADO")
+    print("="*45)
+    extraer_transfermarkt(RUTA_CSV_TRANSFER)
 
     print("\n" + "="*45)
     print("PROCESO COMPLETO FINALIZADO")
