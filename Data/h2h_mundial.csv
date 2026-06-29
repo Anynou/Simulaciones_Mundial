@@ -1,0 +1,280 @@
+﻿Equipo_A,Equipo_B,wins_A,draws,wins_B,goles_avg_A,goles_avg_B,n_matches
+Alemania,Bosnia-Herzegovina,1.0,0.0,0.0,4.5,0.5,2
+Alemania,Costa de Marfil,1.0,0.0,0.0,2.0,1.0,1
+Alemania,Curazao,1.0,0.0,0.0,7.0,1.0,1
+Alemania,EE. UU.,1.0,0.0,0.0,2.0,1.0,1
+Alemania,Ecuador,0.0,0.0,1.0,1.0,2.0,1
+Alemania,Escocia,1.0,0.0,0.0,5.0,1.0,1
+Alemania,España,0.0,1.0,0.0,1.0,1.0,2
+Alemania,Francia,0.0,0.0,1.0,0.0,2.0,1
+Alemania,Ghana,1.0,0.0,0.0,2.0,1.0,1
+Alemania,Inglaterra,0.0,1.0,0.0,2.0,2.0,2
+Alemania,Japón,0.0,0.0,1.0,1.0,2.0,1
+Alemania,Países Bajos,0.5,0.5,0.0,1.5,1.0,2
+Alemania,Portugal,0.0,0.0,1.0,1.0,2.0,1
+Alemania,Suiza,0.5,0.5,0.0,2.5,2.0,2
+Arabia Saudí,Argentina,1.0,0.0,0.0,2.0,1.0,1
+Arabia Saudí,Australia,0.25,0.5,0.25,0.5,0.5,4
+Arabia Saudí,Cabo Verde,0.0,1.0,0.0,0.0,0.0,1
+Arabia Saudí,Corea del Sur,0.0,1.0,0.0,1.0,1.0,1
+Arabia Saudí,EE. UU.,0.0,0.0,1.0,0.0,1.0,1
+Arabia Saudí,Egipto,0.0,0.0,1.0,0.0,4.0,1
+Arabia Saudí,España,0.0,0.0,1.0,0.0,4.0,1
+Arabia Saudí,Haití,1.0,0.0,0.0,1.0,0.0,1
+Arabia Saudí,Irak,0.0,1.0,0.0,0.0,0.0,1
+Arabia Saudí,Japón,0.25,0.25,0.5,0.25,1.0,4
+Arabia Saudí,Jordania,0.5,0.0,0.5,1.5,1.0,2
+Arabia Saudí,México,0.0,0.0,1.0,0.5,2.0,2
+Arabia Saudí,Senegal,0.0,1.0,0.0,0.0,0.0,1
+Arabia Saudí,Uruguay,0.0,1.0,0.0,1.0,1.0,1
+Arabia Saudí,Uzbekistán,1.0,0.0,0.0,3.0,0.0,1
+Argelia,Argentina,0.0,0.0,1.0,0.0,3.0,1
+Argelia,Austria,0.0,1.0,0.0,3.0,3.0,1
+Argelia,Jordania,1.0,0.0,0.0,2.0,1.0,1
+Argelia,Países Bajos,1.0,0.0,0.0,1.0,0.0,1
+Argelia,RD Congo,0.0,1.0,0.0,0.0,0.0,1
+Argelia,Uruguay,0.0,1.0,0.0,0.0,0.0,1
+Argentina,Australia,1.0,0.0,0.0,2.0,1.0,1
+Argentina,Austria,1.0,0.0,0.0,2.0,0.0,1
+Argentina,Brasil,0.667,0.333,0.0,1.67,0.33,3
+Argentina,Canadá,1.0,0.0,0.0,2.0,0.0,2
+Argentina,Colombia,0.2,0.6,0.2,1.0,1.0,5
+Argentina,Croacia,1.0,0.0,0.0,3.0,0.0,1
+Argentina,Ecuador,0.25,0.5,0.25,0.75,0.75,4
+Argentina,Francia,0.0,1.0,0.0,2.0,2.0,1
+Argentina,Jordania,1.0,0.0,0.0,3.0,1.0,1
+Argentina,México,1.0,0.0,0.0,2.0,0.0,1
+Argentina,Paraguay,0.333,0.333,0.333,0.67,0.67,3
+Argentina,Países Bajos,0.0,1.0,0.0,2.0,2.0,1
+Argentina,Uruguay,0.75,0.0,0.25,1.25,0.5,4
+Australia,Corea del Sur,0.0,1.0,0.0,1.0,1.0,1
+Australia,EE. UU.,0.0,0.0,1.0,0.0,2.0,1
+Australia,Francia,0.0,0.0,1.0,1.0,4.0,1
+Australia,Japón,0.25,0.25,0.5,0.75,1.25,4
+Australia,Jordania,1.0,0.0,0.0,1.0,0.0,1
+Australia,Paraguay,0.0,1.0,0.0,0.0,0.0,1
+Australia,Suiza,0.0,1.0,0.0,1.0,1.0,1
+Australia,Turquía,1.0,0.0,0.0,2.0,0.0,1
+Australia,Túnez,1.0,0.0,0.0,1.0,0.0,1
+Australia,Uzbekistán,0.0,1.0,0.0,1.0,1.0,1
+Austria,Bosnia-Herzegovina,0.5,0.5,0.0,1.5,1.0,2
+Austria,Bélgica,0.0,0.5,0.5,1.5,2.0,2
+Austria,Corea del Sur,1.0,0.0,0.0,1.0,0.0,1
+Austria,Croacia,0.5,0.0,0.5,2.0,1.5,2
+Austria,Escocia,0.0,0.5,0.5,1.0,1.5,2
+Austria,Francia,0.0,0.333,0.667,0.33,1.33,3
+Austria,Ghana,1.0,0.0,0.0,5.0,1.0,1
+Austria,Jordania,1.0,0.0,0.0,3.0,1.0,1
+Austria,Noruega,0.5,0.0,0.5,3.0,1.5,2
+Austria,Países Bajos,1.0,0.0,0.0,3.0,2.0,1
+Austria,Suecia,1.0,0.0,0.0,2.5,0.5,2
+Austria,Turquía,0.0,0.0,1.0,1.0,2.0,1
+Austria,Túnez,1.0,0.0,0.0,1.0,0.0,1
+Bosnia-Herzegovina,Canadá,0.0,1.0,0.0,1.0,1.0,1
+Bosnia-Herzegovina,Catar,1.0,0.0,0.0,3.0,1.0,1
+Bosnia-Herzegovina,Francia,0.0,0.5,0.5,0.5,1.0,2
+Bosnia-Herzegovina,Panamá,0.0,1.0,0.0,1.0,1.0,1
+Bosnia-Herzegovina,Países Bajos,0.0,0.5,0.5,1.5,3.0,2
+Bosnia-Herzegovina,Portugal,0.0,0.0,1.0,0.0,4.0,2
+Bosnia-Herzegovina,Suiza,0.0,0.0,1.0,1.0,4.0,1
+Brasil,Colombia,0.4,0.4,0.2,1.0,0.8,5
+Brasil,Corea del Sur,1.0,0.0,0.0,4.0,1.0,1
+Brasil,Croacia,0.5,0.5,0.0,1.5,0.5,2
+Brasil,Ecuador,0.5,0.5,0.0,1.0,0.25,4
+Brasil,Egipto,1.0,0.0,0.0,2.0,1.0,1
+Brasil,Escocia,1.0,0.0,0.0,3.0,0.0,1
+Brasil,Francia,0.0,0.0,1.0,1.0,2.0,1
+Brasil,Haití,1.0,0.0,0.0,3.0,0.0,1
+Brasil,Marruecos,0.0,1.0,0.0,1.0,1.0,1
+Brasil,Paraguay,0.8,0.0,0.2,2.2,0.4,5
+Brasil,Suiza,1.0,0.0,0.0,1.0,0.0,1
+Brasil,Uruguay,0.25,0.5,0.25,1.25,1.0,4
+Bélgica,Canadá,1.0,0.0,0.0,1.0,0.0,1
+Bélgica,Croacia,0.5,0.5,0.0,1.0,0.0,2
+Bélgica,EE. UU.,1.0,0.0,0.0,5.0,2.0,1
+Bélgica,Egipto,0.0,1.0,0.0,1.0,1.0,1
+Bélgica,Francia,0.0,0.0,1.0,0.33,1.67,3
+Bélgica,Irán,0.0,1.0,0.0,0.0,0.0,1
+Bélgica,Marruecos,0.0,0.0,1.0,0.0,2.0,1
+Bélgica,México,0.0,1.0,0.0,1.0,1.0,1
+Bélgica,Nueva Zelanda,1.0,0.0,0.0,5.0,1.0,1
+Bélgica,Países Bajos,0.0,0.0,1.0,0.5,2.5,2
+Bélgica,República Checa,0.5,0.5,0.0,2.0,0.5,2
+Bélgica,Suecia,0.5,0.5,0.0,2.0,0.5,2
+Bélgica,Túnez,1.0,0.0,0.0,5.0,0.0,1
+Cabo Verde,Egipto,0.0,0.5,0.5,0.5,2.0,2
+Cabo Verde,España,0.0,1.0,0.0,0.0,0.0,1
+Cabo Verde,Uruguay,0.0,1.0,0.0,2.0,2.0,1
+Canadá,Catar,1.0,0.0,0.0,6.0,0.0,1
+Canadá,Croacia,0.0,0.0,1.0,1.0,4.0,1
+Canadá,Curazao,0.0,1.0,0.0,1.0,1.0,1
+Canadá,EE. UU.,0.667,0.333,0.0,1.67,0.67,3
+Canadá,Haití,1.0,0.0,0.0,2.0,0.0,2
+Canadá,Marruecos,0.0,0.0,1.0,1.0,2.0,1
+Canadá,México,0.333,0.333,0.333,1.0,1.33,3
+Canadá,Panamá,0.5,0.0,0.5,2.0,1.0,2
+Canadá,Suiza,0.0,0.0,1.0,1.0,2.0,1
+Canadá,Túnez,0.0,1.0,0.0,0.0,0.0,1
+Canadá,Uruguay,0.0,1.0,0.0,2.0,2.0,1
+Canadá,Uzbekistán,1.0,0.0,0.0,2.0,0.0,1
+Catar,Ecuador,0.0,0.0,1.0,0.0,2.0,1
+Catar,Irán,0.667,0.0,0.333,1.67,2.0,3
+Catar,Jordania,1.0,0.0,0.0,3.0,1.0,1
+Catar,Países Bajos,0.0,0.0,1.0,0.0,2.0,1
+Catar,Senegal,0.0,0.0,1.0,1.0,3.0,1
+Catar,Suiza,0.0,1.0,0.0,1.0,1.0,1
+Catar,Uzbekistán,0.333,0.333,0.333,1.33,2.0,3
+Colombia,Croacia,0.0,0.0,1.0,1.0,2.0,1
+Colombia,Ecuador,0.0,0.667,0.333,0.0,0.33,3
+Colombia,Francia,0.0,0.0,1.0,1.0,3.0,1
+Colombia,Jordania,1.0,0.0,0.0,2.0,0.0,1
+Colombia,Panamá,1.0,0.0,0.0,5.0,0.0,1
+Colombia,Paraguay,0.4,0.6,0.0,1.2,0.8,5
+Colombia,Portugal,0.0,1.0,0.0,0.0,0.0,1
+Colombia,RD Congo,1.0,0.0,0.0,1.0,0.0,1
+Colombia,Uruguay,0.25,0.5,0.25,1.25,1.25,4
+Colombia,Uzbekistán,1.0,0.0,0.0,3.0,1.0,1
+Corea del Sur,Costa de Marfil,0.0,0.0,1.0,0.0,4.0,1
+Corea del Sur,Ghana,0.0,0.0,1.0,2.0,3.0,1
+Corea del Sur,Irak,0.75,0.25,0.0,2.0,0.5,4
+Corea del Sur,Irán,0.5,0.5,0.0,1.5,0.5,2
+Corea del Sur,Jordania,0.25,0.5,0.25,1.25,1.25,4
+Corea del Sur,México,0.0,0.0,1.0,0.0,1.0,1
+Corea del Sur,Portugal,1.0,0.0,0.0,2.0,1.0,1
+Corea del Sur,República Checa,1.0,0.0,0.0,2.0,1.0,1
+Corea del Sur,Sudáfrica,0.0,0.0,1.0,0.0,1.0,1
+Corea del Sur,Uruguay,0.0,1.0,0.0,0.0,0.0,1
+Costa de Marfil,Curazao,1.0,0.0,0.0,2.0,0.0,1
+Costa de Marfil,Ecuador,1.0,0.0,0.0,1.0,0.0,1
+Costa de Marfil,Egipto,0.0,0.0,1.0,2.0,3.0,1
+Costa de Marfil,Escocia,1.0,0.0,0.0,1.0,0.0,1
+Costa de Marfil,Francia,1.0,0.0,0.0,2.0,1.0,1
+Croacia,Escocia,0.5,0.0,0.5,1.0,1.0,2
+Croacia,España,0.0,0.5,0.5,0.0,1.5,2
+Croacia,Francia,0.5,0.25,0.25,1.0,0.75,4
+Croacia,Ghana,1.0,0.0,0.0,2.0,1.0,1
+Croacia,Inglaterra,0.0,0.0,1.0,2.0,4.0,1
+Croacia,Japón,0.0,1.0,0.0,1.0,1.0,1
+Croacia,Marruecos,0.5,0.5,0.0,1.0,0.5,2
+Croacia,Panamá,1.0,0.0,0.0,1.0,0.0,1
+Croacia,Países Bajos,0.0,1.0,0.0,2.0,2.0,1
+Croacia,Portugal,0.0,0.5,0.5,1.0,1.5,2
+Croacia,República Checa,0.5,0.5,0.0,2.5,0.5,2
+Croacia,Turquía,0.5,0.0,0.5,1.0,0.5,2
+Curazao,Ecuador,0.0,1.0,0.0,0.0,0.0,1
+Curazao,Haití,1.0,0.0,0.0,5.0,1.0,1
+Curazao,Panamá,0.0,0.5,0.5,0.5,1.0,2
+EE. UU.,Haití,1.0,0.0,0.0,2.0,1.0,1
+EE. UU.,Inglaterra,0.0,1.0,0.0,0.0,0.0,1
+EE. UU.,Irán,1.0,0.0,0.0,1.0,0.0,1
+EE. UU.,México,0.333,0.333,0.333,1.0,0.67,3
+EE. UU.,Panamá,0.25,0.0,0.75,1.5,1.25,4
+EE. UU.,Paraguay,1.0,0.0,0.0,4.0,1.0,1
+EE. UU.,Países Bajos,0.0,0.0,1.0,1.0,3.0,1
+EE. UU.,Portugal,0.0,0.0,1.0,0.0,2.0,1
+EE. UU.,Turquía,0.0,0.0,1.0,2.0,3.0,1
+EE. UU.,Uruguay,0.0,0.0,1.0,0.0,1.0,1
+Ecuador,Marruecos,0.0,1.0,0.0,1.0,1.0,1
+Ecuador,México,0.0,1.0,0.0,0.0,0.0,1
+Ecuador,Paraguay,0.25,0.5,0.25,0.75,0.75,4
+Ecuador,Países Bajos,0.0,1.0,0.0,1.0,1.0,2
+Ecuador,Senegal,0.0,0.0,1.0,1.0,2.0,1
+Ecuador,Uruguay,0.333,0.333,0.333,0.67,0.67,3
+Egipto,España,0.0,1.0,0.0,0.0,0.0,1
+Egipto,Irán,0.0,1.0,0.0,1.0,1.0,1
+Egipto,Nueva Zelanda,1.0,0.0,0.0,3.0,1.0,1
+Egipto,Senegal,0.333,0.0,0.667,0.33,0.67,3
+Egipto,Sudáfrica,1.0,0.0,0.0,1.0,0.0,1
+Escocia,España,0.5,0.0,0.5,1.0,1.0,2
+Escocia,Haití,1.0,0.0,0.0,1.0,0.0,1
+Escocia,Japón,0.0,0.0,1.0,0.0,1.0,1
+Escocia,Marruecos,0.0,0.0,1.0,0.0,1.0,1
+Escocia,Noruega,0.5,0.5,0.0,2.5,2.0,2
+Escocia,Portugal,0.0,0.5,0.5,0.5,1.0,2
+Escocia,Suiza,0.0,1.0,0.0,1.0,1.0,1
+España,Francia,1.0,0.0,0.0,3.5,2.5,2
+España,Inglaterra,1.0,0.0,0.0,2.0,1.0,1
+España,Irak,0.0,1.0,0.0,1.0,1.0,1
+España,Japón,0.0,0.0,1.0,1.0,2.0,1
+España,Marruecos,0.0,1.0,0.0,0.0,0.0,1
+España,Noruega,1.0,0.0,0.0,2.0,0.0,2
+España,Países Bajos,0.0,1.0,0.0,2.0,2.0,2
+España,Portugal,0.333,0.667,0.0,1.33,1.0,3
+España,República Checa,0.5,0.5,0.0,2.0,1.0,2
+España,Suecia,0.5,0.0,0.5,1.0,1.0,2
+España,Suiza,0.75,0.0,0.25,2.25,1.25,4
+España,Turquía,0.5,0.5,0.0,4.0,1.0,2
+España,Uruguay,1.0,0.0,0.0,1.0,0.0,1
+Francia,Inglaterra,1.0,0.0,0.0,2.0,1.0,1
+Francia,Irak,1.0,0.0,0.0,3.0,0.0,1
+Francia,Marruecos,1.0,0.0,0.0,2.0,0.0,1
+Francia,Noruega,1.0,0.0,0.0,4.0,1.0,1
+Francia,Países Bajos,0.667,0.333,0.0,2.0,0.33,3
+Francia,Portugal,0.0,1.0,0.0,0.0,0.0,1
+Francia,Senegal,1.0,0.0,0.0,3.0,1.0,1
+Francia,Túnez,0.0,0.0,1.0,0.0,1.0,1
+Ghana,Inglaterra,0.0,1.0,0.0,0.0,0.0,1
+Ghana,México,0.0,0.0,1.0,0.0,2.0,1
+Ghana,Panamá,1.0,0.0,0.0,1.0,0.0,1
+Ghana,Portugal,0.0,0.0,1.0,2.0,3.0,1
+Ghana,Sudáfrica,0.5,0.0,0.5,0.5,0.5,2
+Ghana,Uruguay,0.0,0.0,1.0,0.0,2.0,1
+Haití,Marruecos,0.0,0.0,1.0,2.0,4.0,1
+Haití,Nueva Zelanda,1.0,0.0,0.0,4.0,0.0,1
+Haití,Túnez,0.0,0.0,1.0,0.0,1.0,1
+Inglaterra,Irán,1.0,0.0,0.0,6.0,2.0,1
+Inglaterra,Japón,0.0,0.0,1.0,0.0,1.0,1
+Inglaterra,Nueva Zelanda,1.0,0.0,0.0,1.0,0.0,1
+Inglaterra,Panamá,1.0,0.0,0.0,2.0,0.0,1
+Inglaterra,Países Bajos,1.0,0.0,0.0,2.0,1.0,1
+Inglaterra,Senegal,1.0,0.0,0.0,3.0,0.0,1
+Inglaterra,Suiza,0.0,1.0,0.0,1.0,1.0,1
+Inglaterra,Uruguay,0.0,1.0,0.0,1.0,1.0,1
+Irak,Irán,0.0,0.0,1.0,0.0,1.67,3
+Irak,Japón,1.0,0.0,0.0,2.0,1.0,1
+Irak,Jordania,0.333,0.333,0.333,1.0,1.0,3
+Irak,Noruega,0.0,0.0,1.0,1.0,4.0,1
+Irak,Senegal,0.0,0.0,1.0,0.0,5.0,1
+Irán,Japón,1.0,0.0,0.0,2.0,1.0,1
+Irán,Nueva Zelanda,0.0,1.0,0.0,2.0,2.0,1
+Irán,Uzbekistán,0.0,1.0,0.0,1.0,1.0,4
+Japón,Países Bajos,0.0,1.0,0.0,2.0,2.0,1
+Japón,Suecia,0.0,1.0,0.0,1.0,1.0,1
+Japón,Túnez,1.0,0.0,0.0,4.0,0.0,1
+Marruecos,Noruega,0.0,1.0,0.0,1.0,1.0,1
+Marruecos,Paraguay,1.0,0.0,0.0,2.0,1.0,1
+Marruecos,Portugal,1.0,0.0,0.0,1.0,0.0,1
+Marruecos,RD Congo,0.5,0.5,0.0,2.5,1.0,2
+Marruecos,Senegal,0.0,0.0,1.0,,0.0,1
+México,Panamá,0.75,0.25,0.0,1.25,0.5,4
+México,Portugal,0.0,1.0,0.0,0.0,0.0,1
+México,República Checa,1.0,0.0,0.0,3.0,0.0,1
+México,Sudáfrica,1.0,0.0,0.0,2.0,0.0,1
+Noruega,Países Bajos,0.0,0.333,0.667,0.67,1.67,3
+Noruega,Senegal,1.0,0.0,0.0,3.0,2.0,1
+Noruega,Suecia,1.0,0.0,0.0,2.67,1.33,3
+Noruega,Suiza,0.0,1.0,0.0,0.0,0.0,1
+Noruega,Turquía,0.0,0.5,0.5,0.5,2.0,2
+Panamá,Sudáfrica,0.5,0.5,0.0,1.5,1.0,2
+Panamá,Uruguay,0.0,0.0,1.0,1.0,3.0,1
+Paraguay,Turquía,1.0,0.0,0.0,1.0,0.0,1
+Paraguay,Uruguay,0.25,0.5,0.25,0.5,0.25,4
+Países Bajos,Senegal,1.0,0.0,0.0,2.0,0.0,1
+Países Bajos,Suecia,1.0,0.0,0.0,5.0,1.0,1
+Países Bajos,Turquía,0.667,0.0,0.333,3.33,2.0,3
+Países Bajos,Túnez,1.0,0.0,0.0,3.0,1.0,1
+Países Bajos,Uzbekistán,1.0,0.0,0.0,2.0,1.0,1
+Portugal,RD Congo,0.0,1.0,0.0,1.0,1.0,1
+Portugal,República Checa,1.0,0.0,0.0,2.67,0.33,3
+Portugal,Suiza,0.667,0.0,0.333,3.33,0.67,3
+Portugal,Turquía,1.0,0.0,0.0,3.0,0.5,2
+Portugal,Uruguay,1.0,0.0,0.0,2.0,0.0,1
+Portugal,Uzbekistán,1.0,0.0,0.0,5.0,0.0,1
+RD Congo,Senegal,0.0,0.667,0.333,1.33,1.67,3
+RD Congo,Uzbekistán,1.0,0.0,0.0,3.0,1.0,1
+República Checa,Sudáfrica,0.0,1.0,0.0,1.0,1.0,1
+República Checa,Suecia,0.0,1.0,0.0,0.0,0.0,1
+República Checa,Suiza,0.5,0.0,0.5,1.5,1.5,2
+República Checa,Turquía,0.0,0.0,1.0,1.0,2.0,1
+Suecia,Suiza,0.0,0.0,1.0,0.5,3.0,2
+Suecia,Túnez,1.0,0.0,0.0,5.0,1.0,1
