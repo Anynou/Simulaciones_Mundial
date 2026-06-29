@@ -6,55 +6,50 @@
 
 ## 🔄 El pipeline, paso a paso
 
-### 1️⃣ Scraping — [`01_Scraping/`](01_Scraping/)
-Un scraper (Selenium + BeautifulSoup) se descarga **todo el histórico de estadísticas de FlashScore**: resultados, xG, posesión, remates a puerta, córneres, faltas, paradas, pases... de los últimos partidos de cada selección, más el ranking FIFA. Si no quieres scrapear desde cero, los datos ya descargados están en [`Data/`](Data/).
+Todo el código del proyecto centralizado se encuentra dentro del directorio [`code/`](code/).
 
-### 2️⃣ Limpieza de datos — [`02_Limpieza_Datos/`](02_Limpieza_Datos/)
-El notebook `Data Cleaning.ipynb` hace el JOIN de las distintas fuentes descargadas y una buena limpieza para **pasar del HTML scrapeado en bruto a un dataset modelable**: una fila por partido con las estadísticas de los dos equipos.
+### 1️⃣ Scraping — [`code/Scrapper.py`](code/Scrapper.py) y [`code/Scrapper_nuevos.py`](code/Scrapper_nuevos.py)
+Los scrapers (Selenium + BeautifulSoup) se descargan **todo el histórico de estadísticas de FlashScore**: resultados, xG, posesión, remates a puerta, córneres, faltas, paradas, pases... de los últimos partidos de cada selección, más el ranking FIFA. Si no quieres scrapear desde cero, los datos ya descargados están en la raíz dentro de [`Data/`](Data/).
 
-### 3️⃣ Ingeniería de variables
-Sobre los datos limpios se construyen **medias móviles (últimos 5 partidos e histórico), ratios y diferencias** entre equipos para capturar el *estado de forma* de cada selección justo antes del partido: diferencia de puntos Elo/FIFA, probabilidad implícita del Elo, tiers de nivel, pesos por confederación y diferenciales de cada estadística. Eso es lo que el modelo "ve" para predecir el resultado.
+### 2️⃣ Limpieza de datos — [`code/Data_Cleaning.py`](code/Data_Cleaning.py)
+Este script hace el JOIN de las distintas fuentes descargadas y realiza una limpieza exhaustiva para **pasar del HTML scrapeado en bruto a un dataset modelable**: una fila por partido con las estadísticas de los dos equipos.
 
-### 4️⃣ Dos modelos XGBoost — [`03_Modelado_Simulacion/`](03_Modelado_Simulacion/)
-Con los datos listos, en `Modelling.ipynb` se entrenan dos modelos:
+### 3️⃣ Ingeniería de variables y Modelado — [`code/Modelling.ipynb`](code/Modelling.ipynb)
+En este notebook se procesan las variables y se entrenan los modelos:
+* **Ingeniería de variables**: Sobre los datos limpios se construyen **medias móviles (últimos 5 partidos e histórico), ratios y diferencias** entre equipos para capturar el *estado de forma* de cada selección justo antes del partido (puntos Elo/FIFA, probabilidad implícita, tiers, pesos por confederación).
+* **Modelos XGBoost**: 
+  1. **Modelo de goles**: dos regresores XGBoost con objetivo Tweedie (ideal para fútbol) que predicen los goles esperados de cada equipo.
+  2. **Modelo de resultado**: un clasificador XGBoost 1X2 que usa como meta-variables las predicciones de goles del primero, con **probabilidades calibradas** (calibración isotónica).
 
-1. **Modelo de goles**: dos regresores XGBoost con objetivo Tweedie (a medio camino entre Poisson y Gamma, ideal para fútbol) que predicen los goles esperados de cada equipo.
-2. **Modelo de resultado**: un clasificador XGBoost 1X2 que usa como meta-variables las predicciones de goles del primero, con **probabilidades calibradas** (calibración isotónica) y validación temporal para no mezclar pasado y futuro.
+### 4️⃣ El comportamiento estocástico: Monte Carlo con 10.000 mundiales
+¿Por qué no basta con simular un mundial? Porque la realidad es **estocástica**. Para capturar el efecto de la varianza, simulamos **10.000 mundiales diferentes** a través de las probabilidades estimadas por el modelo en todos los cruces del torneo — fase de grupos partido a partido, mejores terceros, dieciseisavos, octavos, cuartos, semifinales y final.
 
-### 5️⃣ El comportamiento estocástico: Monte Carlo con 10.000 mundiales
-¿Por qué no basta con simular un mundial? Porque la realidad es **estocástica**. Si solo simulásemos uno, una selección con el 51% de probabilidades de pasar, pasaría exactamente igual que una con el 99%. Para capturar el efecto de la varianza, simulamos **10.000 mundiales diferentes**: el equipo del 51% se clasifica en ~5.100 de ellos y el del 99% en ~9.900. Así vemos el efecto de las probabilidades en todos los cruces que tendríamos hasta la final — fase de grupos partido a partido, mejores terceros, dieciseisavos, octavos, cuartos, semifinales y final.
+### 5️⃣ Predicción de los partidos — [`code/prediccion_mundial.py`](code/prediccion_mundial.py) y [`code/prediccion_fasefinal.py`](code/prediccion_fasefinal.py)
+Scripts dedicados a ejecutar el pipeline end-to-end para generar las predicciones de la fase de grupos, el desarrollo completo del cuadro definitivo y el Monte Carlo general. 
 
-### 🌐 Web de predicciones diarias — [`05_Web/`](05_Web/) → [`docs/`](docs/)
-Una página estática (lista para **GitHub Pages**) con las predicciones de cada día: probabilidades de victoria calibradas, córners esperados (líneas 7.5/8.5/9.5), tarjetas esperadas (líneas 3.5/4.5), marcador más probable, tabla de campeón por Monte Carlo y el cuadro completo de eliminatorias. La sección «Partidos de hoy» se calcula con la fecha local del visitante, así que **se actualiza sola cada día** sin regenerar nada; además, un workflow de GitHub Actions ([`.github/workflows/actualizar_web.yml`](.github/workflows/actualizar_web.yml)) la regenera a diario por si cambian los datos.
+**Resultados consolidados** en [`Predicciones/PREDICCIONES.md`](Predicciones/PREDICCIONES.md): marcador más probable y probabilidades 1X2 de los 104 partidos, clasificaciones de los 12 grupos, cuadro hasta la final y probabilidades de campeón por selección.
+
+### 🌐 Web de predicciones diarias — [`docs/`](docs/)
+Una página estática (lista para **GitHub Pages**) alojada en la carpeta `docs/` con las predicciones de cada día: probabilidades calibradas, córners, tarjetas y el cuadro interactivo. Un workflow de GitHub Actions ([`.github/workflows/actualizar_web.yml`](.github/workflows/actualizar_web.yml)) la regenera a diario automáticamente.
 
 Para activarla: en GitHub ve a **Settings → Pages → Source: Deploy from a branch → `main` / `docs/`**. La web quedará en `https://<usuario>.github.io/Simulaciones_Mundial/`.
-
-### 6️⃣ Predicción de los 104 partidos — [`04_Prediccion/`](04_Prediccion/) → [`Predicciones/`](Predicciones/)
-`prediccion_mundial.py` es el pipeline completo en un script: entrena los modelos (si no existen los `.pkl`), predice los 72 partidos de la fase de grupos, construye el cuadro completo de eliminatorias con el resultado más probable de cada cruce (incluido el 3er puesto) y corre el Monte Carlo. `generar_informe.py` lo convierte en un informe legible.
-
-**Resultados** en [`Predicciones/PREDICCIONES.md`](Predicciones/PREDICCIONES.md): marcador más probable y probabilidades 1X2 de los 104 partidos, clasificaciones de los 12 grupos, cuadro hasta la final y probabilidades de campeón por selección (los mismos datos en CSV en la misma carpeta).
 
 ---
 
 ## 📂 Estructura del repositorio
 
 ```
-├── 01_Scraping/              # Extracción de datos de FlashScore (Selenium)
-│   └── Scrapper.py
-├── 02_Limpieza_Datos/        # JOIN y limpieza → dataset modelable
-│   └── Data Cleaning.ipynb
-├── 03_Modelado_Simulacion/   # Ingeniería de variables, XGBoost y Monte Carlo
-│   └── Modelling.ipynb
-├── 04_Prediccion/            # Pipeline end-to-end en script
-│   ├── prediccion_mundial.py
-│   └── generar_informe.py
-├── 05_Web/                   # Generador de la web de predicciones diarias
-│   └── generar_web.py
-├── docs/                     # Web estática (GitHub Pages)
-│   └── index.html
+├── code/                     # Scripts y notebooks de todo el pipeline
+│   ├── Data_Cleaning.py      # JOIN y limpieza → dataset modelable
+│   ├── Modelling.ipynb       # Ingeniería de variables, XGBoost y Monte Carlo
+│   ├── Scrapper.py           # Extracción de datos históricos de FlashScore (Selenium)
+│   ├── Scrapper_nuevos.py    # Extracción de nuevos datos/actualizaciones
+│   ├── prediccion_fasefinal.py # Script de predicción para las eliminatorias directas
+│   └── prediccion_mundial.py   # Pipeline de predicción completo del torneo
 ├── Data/                     # Datos scrapeados y procesados (CSV)
+├── docs/                     # Web estática desplegada en GitHub Pages (index.html)
 └── Predicciones/             # Predicción de los 104 partidos + Monte Carlo
-    └── PREDICCIONES.md
+└── PREDICCIONES.md
 ```
 
 ## 🚀 Replicarlo
@@ -62,17 +57,18 @@ Para activarla: en GitHub ve a **Settings → Pages → Source: Deploy from a br
 ```bash
 pip install pandas numpy xgboost scikit-learn joblib tqdm
 
-# (Opcional) actualizar los datos desde cero
-python 01_Scraping/Scrapper.py
+# (Opcional) actualizar u obtener los datos desde cero
+python code/Scrapper.py
+python code/Scrapper_nuevos.py
 
-# Limpieza y modelado explicados paso a paso: notebooks 02 y 03
+# Ejecutar limpieza de datos
+python code/Data_Cleaning.py
+
+# El entrenamiento y calibración se pueden revisar en el notebook: code/Modelling.ipynb
 
 # Predicción completa del Mundial (entrena + simula 10.000 mundiales)
-python 04_Prediccion/prediccion_mundial.py
-python 04_Prediccion/generar_informe.py
-
-# Web de predicciones diarias (docs/index.html)
-python 05_Web/generar_web.py
+python code/prediccion_mundial.py
+python code/prediccion_fasefinal.py
 ```
 
 ## 💡 Inspírate
