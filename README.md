@@ -65,6 +65,7 @@ python code/Scrapper_nuevos.py
 python code/Data_Cleaning.py
 
 # El entrenamiento y calibración se pueden revisar en el notebook: code/Modelling.ipynb
+code/Modelling.ipynb
 
 # Predicción completa del Mundial (entrena + simula 10.000 mundiales)
 python code/prediccion_mundial.py
